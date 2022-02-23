@@ -1,6 +1,6 @@
 import Foundation
 
-struct NetworkLog: Identifiable, Encodable, FileOutputable {
+struct NetworkLog: Identifiable, Encodable, Comparable, FileOutputable {
 
     struct Request: Encodable {
 
@@ -34,7 +34,7 @@ struct NetworkLog: Identifiable, Encodable, FileOutputable {
 
     }
 
-    struct Time: Encodable {
+    struct Time: Comparable, Encodable {
 
         enum Constant {
 
@@ -54,6 +54,10 @@ struct NetworkLog: Identifiable, Encodable, FileOutputable {
             self.end = Constant.formatter.string(from: end)
         }
 
+        static func < (lhs: Self, rhs: Self) -> Bool {
+            lhs.start < rhs.start
+        }
+
     }
 
     let id: UUID
@@ -68,5 +72,14 @@ struct NetworkLog: Identifiable, Encodable, FileOutputable {
         self.response = .init(response.0, response.1)
         self.time = .init(start, end)
     }
+
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    static func < (lhs: Self, rhs: Self) -> Bool {
+        lhs.time < rhs.time
+    }
+
 
 }

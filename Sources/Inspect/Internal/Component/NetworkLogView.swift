@@ -7,6 +7,13 @@ struct NetworkLogView: View {
     var body: some View {
         List {
             Section {
+                ListItem.subtitle(text: "Start", detail: log.time.start)
+                ListItem.subtitle(text: "End", detail: log.time.end)
+            } header: {
+                Text("Time")
+            }
+
+            Section {
                 ListItem.subtitle(text: "Method", detail: log.request.method)
                 ListItem.subtitle(text: "URL", detail: log.request.url.absoluteString)
                 if let body = log.request.body {
@@ -35,13 +42,6 @@ struct NetworkLogView: View {
                 }
             } header: {
                 Text("Response")
-            }
-
-            Section {
-                ListItem.subtitle(text: "Start", detail: log.time.start)
-                ListItem.subtitle(text: "End", detail: log.time.end)
-            } header: {
-                Text("Time")
             }
         }
         .navigationTitle("Network Log")

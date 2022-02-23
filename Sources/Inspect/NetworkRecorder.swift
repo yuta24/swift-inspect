@@ -35,8 +35,6 @@ public final class NetworkRecorder: URLProtocol {
 
             let endDate = Date()
 
-            print("duration: \(endDate.timeIntervalSince1970 - startDate.timeIntervalSince1970)")
-
             if let error = error {
                 self.client?.urlProtocol(self, didFailWithError: error)
             }

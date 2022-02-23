@@ -42,15 +42,18 @@ public struct InspectView: View {
                     NavigationLink {
                         LazyView {
                             if model.logs.isEmpty {
-                                Text("no network logs")
+                                Text("No network logs")
+                                    .font(.title)
                             } else {
-                                List(model.logs) { log in
+                                List(model.logs.sorted().reversed()) { log in
                                     NavigationLink {
                                         NetworkLogView(log)
                                     } label: {
                                         VStack(alignment: .leading) {
                                             Text("\(log.response.statusCode)")
+                                                .font(.headline)
                                             Text("\(log.request.url.absoluteString)")
+                                                .font(.body)
                                         }
                                     }
                                 }

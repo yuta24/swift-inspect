@@ -7,22 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B92E50427C6641F0081D216 /* Inspect in Frameworks */ = {isa = PBXBuildFile; productRef = 2B92E50327C6641F0081D216 /* Inspect */; };
 		2BD4D59F27C2832E0075AF87 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4D59E27C2832E0075AF87 /* ExampleApp.swift */; };
 		2BD4D5A127C2832E0075AF87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4D5A027C2832E0075AF87 /* ContentView.swift */; };
 		2BD4D5A327C2832F0075AF87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD4D5A227C2832F0075AF87 /* Assets.xcassets */; };
 		2BD4D5A627C2832F0075AF87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BD4D5A527C2832F0075AF87 /* Preview Assets.xcassets */; };
-		2BD4D5B127C286B80075AF87 /* Inspect in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD4D5B027C286B80075AF87 /* Inspect */; };
 		2BD4D5B327C2872A0075AF87 /* SwiftUI+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD4D5B227C2872A0075AF87 /* SwiftUI+Shake.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B92E50227C664150081D216 /* swift-inspect */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-inspect"; path = ../..; sourceTree = "<group>"; };
 		2BD4D59B27C2832E0075AF87 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD4D59E27C2832E0075AF87 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		2BD4D5A027C2832E0075AF87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2BD4D5A227C2832F0075AF87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BD4D5A527C2832F0075AF87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2BD4D5AD27C2856A0075AF87 /* swift-inspect */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-inspect"; path = ..; sourceTree = "<group>"; };
-		2BD4D5AE27C2869B0075AF87 /* swift-inspect */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "swift-inspect"; path = ..; sourceTree = "<group>"; };
 		2BD4D5B227C2872A0075AF87 /* SwiftUI+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI+Shake.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,17 +30,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BD4D5B127C286B80075AF87 /* Inspect in Frameworks */,
+				2B92E50427C6641F0081D216 /* Inspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B92E50127C664150081D216 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				2B92E50227C664150081D216 /* swift-inspect */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
 		2BD4D59227C2832E0075AF87 = {
 			isa = PBXGroup;
 			children = (
-				2BD4D5AC27C2856A0075AF87 /* Packages */,
+				2B92E50127C664150081D216 /* Packages */,
 				2BD4D59D27C2832E0075AF87 /* Example */,
 				2BD4D59C27C2832E0075AF87 /* Products */,
 				2BD4D5AF27C286B80075AF87 /* Frameworks */,
@@ -76,15 +83,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2BD4D5AC27C2856A0075AF87 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				2BD4D5AD27C2856A0075AF87 /* swift-inspect */,
-				2BD4D5AE27C2869B0075AF87 /* swift-inspect */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		2BD4D5AF27C286B80075AF87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +107,7 @@
 			);
 			name = Example;
 			packageProductDependencies = (
-				2BD4D5B027C286B80075AF87 /* Inspect */,
+				2B92E50327C6641F0081D216 /* Inspect */,
 			);
 			productName = Example;
 			productReference = 2BD4D59B27C2832E0075AF87 /* Example.app */;
@@ -370,7 +368,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2BD4D5B027C286B80075AF87 /* Inspect */ = {
+		2B92E50327C6641F0081D216 /* Inspect */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Inspect;
 		};

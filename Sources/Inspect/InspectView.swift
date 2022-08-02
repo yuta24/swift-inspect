@@ -1,9 +1,11 @@
 import SwiftUI
 
-public struct InspectView: View {
+public struct InspectView<Content: View>: View {
 
     @ObservedObject
     private var model: InspectViewModel = .init()
+
+    private let content: Content?
 
     public var body: some View {
         List {
@@ -82,6 +84,14 @@ public struct InspectView: View {
             } header: {
                 Text("UserDefaults")
             }
+
+            if let content = content {
+                Section {
+                    content
+                } header: {
+                    Text("Custom")
+                }
+            }
         }
         .sheet(isPresented: $model.isActivityPresented) {
             if let url = model.archiveFileURL() {
@@ -97,7 +107,16 @@ public struct InspectView: View {
         )
     }
 
+    public init(@ViewBuilder _ content: () -> Content?) {
+        self.content = content()
+    }
+
+}
+
+extension InspectView where Content == Never {
+
     public init() {
+        self.content = nil
     }
 
 }

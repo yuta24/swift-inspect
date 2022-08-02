@@ -1,7 +1,6 @@
 import SwiftUI
 import Combine
 import OSLog
-import SwiftyJSON
 
 private let logger = Logger(subsystem: "com.bivre.GitHubClient", category: "session")
 
